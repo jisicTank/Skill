@@ -8,8 +8,8 @@
 - [GET / POST의 차이](https://github.com/jisicTank/Skill/blob/master/WEB/GET%20%26%20POST.md)
 - [Session / Cookie의 차이](https://github.com/jisicTank/Skill/blob/master/WEB/%EC%BF%A0%ED%82%A4(Cookie)%20%26%20%EC%84%B8%EC%85%98(Session).md)
   
-  - 서버 여러 대일 때 세션을 어떻게 처리하죠?
-- HTTP / TCP/IP / WebSocket
+  - [서버 여러 대일 때 세션을 어떻게 처리하죠?](https://github.com/jisicTank/Skill/blob/master/WEB/%EB%8B%A4%EC%A4%91%20%EC%84%9C%EB%B2%84%20%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%20Session%20%EA%B3%B5%EC%9C%A0%EB%B2%95.md)
+- [HTTP / TCP/IP / WebSocket](https://github.com/jisicTank/Skill/blob/master/WEB/HTTP%20%26%20TCPIP%20%26%20WebSocket.md)
 
 - Web Server(웹서버)와 WAS의 차이
 - 캐시가 무엇인가요? redis 같은 걸 캐싱 서버로 사용해보신적 있으신가요?
