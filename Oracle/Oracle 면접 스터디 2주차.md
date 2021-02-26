@@ -96,7 +96,7 @@
    AND E.SAL > (SELECT AVG(SAL) FROM EMP);
    ```
 
-   ![단일행](C:\Users\oh12s\Desktop\면접스터디\SKILL\Oracle\image\단일행.png)
+   ![단일행](https://user-images.githubusercontent.com/71415474/109263449-9bb05300-7846-11eb-962e-026b79a658e4.png)
 
 5. 다중행 서브쿼리
    실행 결과 행이 여러 개로 나오는 서브쿼리
@@ -108,7 +108,7 @@
    SELECT * FROM EMP WHERE EXISTS (SELECT DNAME FROM DEPT WHERE DEPTNO = 10);
    ```
 
-   ![다중행](C:\Users\oh12s\Desktop\면접스터디\SKILL\Oracle\image\다중행.png)
+   ![다중행](https://user-images.githubusercontent.com/71415474/109263445-9a7f2600-7846-11eb-80b5-7e2c2aa12bbb.png)
 
 6. 인라인 뷰(Inline view)
    FROM절에서 사용하는 서브쿼리. 일부 데이터를 먼저 추출해 온 후 별칭을 주고 테이블로 하여 사용한다.
