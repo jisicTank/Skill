@@ -1,3 +1,5 @@
+
+
 # AOP, 프록시 패턴 보충
 
 ## AOP
@@ -110,6 +112,7 @@ public interface Biz<K1, K2, V> { //K1: STRING, K2: INTEGER
 
 ## 프록시(Proxy) 패턴
 
+* Proxy ==> 대리인
 * 기존 코드 변경하지 않고 새 기능 추가하기
 
 <br>
@@ -138,7 +141,7 @@ public class Cash implements Payment{
 }
 ```
 
-
+<br>
 
 Store.java(Client code)
 
@@ -156,7 +159,7 @@ public class Store {
 }
 ```
 
-
+<br>
 
 StoreTest.java(JUnit)
 
@@ -165,18 +168,18 @@ class StoreTest {
 
 	@Test
 	void test() {
-		Payment cashPerf = new Cash();
+		Payment cashPerf = new CashPerf();
 		Store store = new Store(cashPerf);
 		store.buySomething(100);
 	}
 }
 ```
 
-
+<br>
 
 > 이 계산하는 과정에 시간 성능을 보고 싶은데.. 기능을 추가해볼까?
 
-
+<br>
 
 CashPerf.java
 
@@ -190,7 +193,8 @@ public class CashPerf implements Payment{
 		StopWatch stopWatch = new StopWatch();
 		stopWatch.start();
 		
-		System.out.println(amount+ " 현금 결제");
+		cash.pay();
+    SQL
 		
 		stopWatch.stop();
 		System.out.println(stopWatch.prettyPrint());
@@ -198,7 +202,7 @@ public class CashPerf implements Payment{
 }
 ```
 
-
+<br>
 
 **기존 코드를 변경하지 않고, CashPerf를 생성하면 기능을 더할 수 있다.** (의존성 주입 IoC 컨테이너)
 
@@ -206,9 +210,78 @@ CashPerf는 Cash의 Proxy이다. CashPerf는 Cash의 기능에 더불어 부가�
 
 스프링에서는 이처럼 Proxy Pattern으로 AOP를 구현하고 있다.
 
-
+<br>
 
 ### Spring에서 AOP 사용하기
 
 @LogExecutionTime 을 원하는 기능에 붙여보자
+
+이번 실습은 Spring boot를 활용하기때문에 eody 프로젝트가 아닌 스프링 공식 프로젝트인 petclinic으로 보여줌.
+
+<br>
+
+* 원하는 위치에 @LogExecutionTime을 붙여주고, Annotation File 자동생성
+
+<br>
+
+**LogExecutionTime Annotation File**
+
+```java
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+// JAVA ANNOTATION
+@Target(ElementType.METHOD) // 어디에 쓸 수 있는지 -> 메서드에 쓰겠다
+@Retention(RetentionPolicy.RUNTIME) // 애너테이션 정보를 언제까지 유지할 것인가 -> RUNTIME
+public @interface LogExecutionTime {
+}
+```
+
+<br>
+
+**LogAspect**
+
+```java
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+import org.springframework.util.StopWatch;
+
+
+@Component
+@Aspect
+public class LogAspect {
+	Logger logger = LoggerFactory.getLogger(LogAspect.class);
+
+	@Around("@annotation(LogExecutionTime)")
+	public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
+		StopWatch stopWatch = new StopWatch();
+		stopWatch.start();
+
+		Object proceed = joinPoint.proceed();
+
+		stopWatch.stop();
+		logger.info(stopWatch.prettyPrint());
+
+		return proceed;
+	}
+}
+```
+
+<br>
+
+**테스트 결과 콘솔**
+
+![스크린샷 2021-02-26 오전 12.10.41]($md-images/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-02-26%20%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB%2012.10.41.png)
+
+
+
+http://localhost:8080/
+
+
 
