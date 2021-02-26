@@ -14,7 +14,7 @@
   
 - [HTTP / TCP/IP / WebSocket](https://github.com/jisicTank/Skill/blob/master/WEB/HTTP%20%26%20TCPIP%20%26%20WebSocket.md)
 
-- [HTTP Status Code](https://github.com/gyoogle/tech-interview-for-developer/blob/master/Web/HTTP status code.md)
+- [HTTP Status Code](https://github.com/gyoogle/tech-interview-for-developer/blob/master/Web/HTTP%20status%20code.md)
 
 - Web Server(웹서버)와 WAS의 차이
 
