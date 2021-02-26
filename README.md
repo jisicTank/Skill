@@ -43,3 +43,5 @@
 * [Spring 프레임워크란](https://github.com/jisicTank/Skill/blob/master/Spring/Spring%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%EB%9E%80.md)
 * [DI(Dependency Injection)](https://github.com/jisicTank/Skill/blob/master/Spring/DI.md)
 * [AOP(Aspect Oriented Programming)](https://github.com/jisicTank/Skill/blob/master/Spring/AOP.md)
+* [IOC_DI 보충](https://github.com/jisicTank/Skill/blob/master/Spring/IoC_DI_%EB%B3%B4%EC%B6%A9.md)
+* [AOP_Proxy 보충](https://github.com/jisicTank/Skill/blob/master/Spring/AOP_%EB%B3%B4%EC%B6%A9.md)
