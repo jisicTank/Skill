@@ -16,6 +16,8 @@
 
 - [HTTP Status Code](https://github.com/gyoogle/tech-interview-for-developer/blob/master/Web/HTTP%20status%20code.md)
 
+- [REST API](https://github.com/jisicTank/Skill/blob/master/WEB/REST%20API.md)
+
 - Web Server(웹서버)와 WAS의 차이
 
 - 캐시가 무엇인가요? redis 같은 걸 캐싱 서버로 사용해보신적 있으신가요?
@@ -28,8 +30,6 @@
   
   - 주소창에 URL을 치고 엔터를 치면 흐름이 어떻게 되는가
   
-- Restful API
-
 - 모델 1,2,MVC 패턴에 대한 설명
 
 - 프론트와 API 서버간에 어떻게 통신을 하는지, 구현을 어떻게 했는지 설명해주세요
