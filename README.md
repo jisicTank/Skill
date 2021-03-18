@@ -20,7 +20,7 @@
 
 - [Web Server(웹서버)와 WAS의 차이](https://github.com/jisicTank/Skill/blob/master/WEB/Web%20Server%EC%99%80%20WAS%EC%9D%98%20%EC%B0%A8%EC%9D%B4.md)
 
-- 캐시가 무엇인가요? redis 같은 걸 캐싱 서버로 사용해보신적 있으신가요?
+- [캐시가 무엇인가요? redis 같은 걸 캐싱 서버로 사용해보신적 있으신가요?](https://github.com/jisicTank/Skill/blob/master/WEB/%EC%BA%90%EC%8B%9C.md)
 
 - CORS 이슈
 
