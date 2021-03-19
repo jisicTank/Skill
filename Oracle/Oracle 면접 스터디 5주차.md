@@ -247,9 +247,9 @@
      END;
      /
      -- USER_SOURCE를 통해 프로시저 확인
-SELECT * FROM USER_SOURCE WHERE NAME = 'PRO_NOPARAM';
+     SELECT * FROM USER_SOURCE WHERE NAME = 'PRO_NOPARAM';
      
--- 프로시저 삭제
+     -- 프로시저 삭제
      DROP PROCEDURE PRO_NOPARAM;
      
      -- IN 모드 파라미터
