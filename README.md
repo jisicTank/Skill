@@ -22,7 +22,7 @@
 
 - [캐시가 무엇인가요? redis 같은 걸 캐싱 서버로 사용해보신적 있으신가요?](https://github.com/jisicTank/Skill/blob/master/WEB/%EC%BA%90%EC%8B%9C.md)
 
-- CORS 이슈
+- [CORS 이슈](https://github.com/jisicTank/Skill/blob/master/WEB/CORS%20%EC%A0%95%EC%B1%85.md)
 
 - AJAX
 
