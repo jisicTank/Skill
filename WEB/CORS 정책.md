@@ -2,7 +2,7 @@
 
 ### Origin(출처)?
 
-![uri-structure](https://user-images.githubusercontent.com/24764210/112473513-cf34bd80-8db1-11eb-84fc-612a1dad6c7c.png)
+![unnamed](https://user-images.githubusercontent.com/24764210/112715034-2016f400-8f21-11eb-891c-ec1b8910b721.png)
 
 **프로토콜, 호스트, 포트**로 구성된 것
 
@@ -12,7 +12,11 @@
 
 `요즘 브라우저에서는 PORT 번호가 다르더라도 같은 origin으로 본다.(익스플로러 제외)`
 
+<br>
 
+<br>
+
+<br>
 
 ### SOP(Same-Origin Policy, 동일 출처 정책)
 
@@ -22,7 +26,7 @@
 
  <img src="https://user-images.githubusercontent.com/24764210/112435140-b1eaf980-8d87-11eb-805f-15dab274704d.PNG" alt="sop" style="zoom: 80%;" />
 
-<img src="C:\Users\15U560-GR5PK\Desktop\012.PNG" alt="012" style="zoom: 80%;" />
+<br>
 
 #### SOP를 사용하는 이유?
 
@@ -33,9 +37,15 @@ XSS, CSRF 위험을 막기 위해서
 2. CSRF(Cross-Site Request Forgeries)
    웹 어플리케이션의 유저가 의도하지 않은 처리를 웹 어플리케이션에서 실행되는 것을 나타내며, 원래는 로그인한 유저 밖에 실행할 수 없는 처리가 멋대로 되는 등의 예시가 있다.
 
+<br>
 
+<br>
+
+<br>
 
 ### Cross Domain(크로스 도메인) 이슈
+
+<img src="https://user-images.githubusercontent.com/24764210/112593728-44080600-8e4b-11eb-9486-9e9b62028b15.PNG" alt="789" style="zoom:80%;" />
 
 웹 브라우저는 Javascript(JQuery)를 이용하여 AJAX 등을 통해서 다른 도메인의 서버의 URL 을 호출하여 데이터를 가져오는 경우, 보안 문제를 발생시킨다.
 
@@ -47,9 +57,11 @@ XSS, CSRF 위험을 막기 위해서
 
 그 당시 개발자들이 몇 가지 만든 해결책이 있는데 **JSONP, Reverse Proxy, Flash Socket** 였으나 문제가 많아 표준을 만들었다.
 
+<br>
 
+<br>
 
-
+<br>
 
 ### CORS(Cross-Origin Resource Sharing)의 등장
 
@@ -65,11 +77,11 @@ W3C에서 권장사항으로 CORS 사양 발표
 
 <img src="https://user-images.githubusercontent.com/24764210/112454956-94745a80-8d9c-11eb-816a-0126c8d4b33e.png" alt="CORS_principle" style="zoom: 67%;" />
 
+<br>
 
+<br>
 
-
-
-
+<br>
 
 ### CORS 시나리오
 
@@ -88,15 +100,17 @@ app.get('/data', (req, res) => {
 });
 ```
 
+<br>
 
+<br>
 
-
+<br>
 
 ### CORS의 동작 방식
 
 <img src="https://user-images.githubusercontent.com/24764210/112470578-2d5fa180-8dae-11eb-938c-75ca1931349f.PNG" alt="015" style="zoom: 80%;" />
 
-
+<br>
 
 - Preflight Requests (사전 요청, 예비 요청)
 
@@ -110,7 +124,7 @@ app.get('/data', (req, res) => {
 
   요청에 Origin과 응답의 Access-Control-Allow-Origin를 브라우저가 비교해 출처를 판단하여 다르면 에러를 발생시키고 접근할 수 있는 출처라면 본 요청을 보내 요청을 처리한다.
 
-  
+  <br>
 
   ![123456](https://user-images.githubusercontent.com/24764210/112481416-56862f00-8dba-11eb-9a3d-3d9e847b1221.png)
 
@@ -168,9 +182,9 @@ app.get('/data', (req, res) => {
     Access-Control-Allow-Origin: https://javascript.info
     ```
   
-    
+    <br>
 
-
+<br>
 
 - Simple Requests(간단한 요청)
 
@@ -178,13 +192,15 @@ app.get('/data', (req, res) => {
 
   요청 메소드는 GET, HEAD, POST 중 하나여야 한다.
 
-  Accept, Accept-Language, Content-Type, DPR, Downlink, Save-Data, Viewport-Width, Sidth를 제외한 헤어를 사용하면 안 된다.
+  Accept, Accept-Language, Content-Type, DPR, Downlink, Save-Data, Viewport-Width, Sidth를 제외한 헤더를 사용하면 안 된다.
 
   만약 Content-Type을 사용하는 경우에는 application/x-www-form-urlencoded, multipart/form-data, text/plain만 허용된다.
 
   <img src="https://user-images.githubusercontent.com/24764210/112474793-65b5ae80-8db3-11eb-9af0-61c70d81fd20.PNG" alt="017" style="zoom:80%;" />
 
-  
+  <br>
+
+  <br>
 
 - Credential Requests(인증을 이용하는 요청)
 
@@ -223,7 +239,11 @@ app.get('/data', (req, res) => {
     Access-Control-Allow-Credentials: true
     ```
   
+    <br>
     
+    <br>
+    
+    <br>
 
 ### 기타 내용
 
@@ -252,9 +272,15 @@ app.get('/data', (req, res) => {
 
 - Spring의 경우 CORS 정책이 이미 셋팅 되어 있기 때문에 따로 설정해주지 않아도 다른 서버와 연결이 가능하다.
 
+<br>
 
+<br>
 
+<br>
 
+<br>
+
+<br>
 
 ### Q. 면접질문
 
