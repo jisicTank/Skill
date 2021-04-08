@@ -1,4 +1,4 @@
-# HDFS & MapReduce
+# HDFS
 
 > 큰 데이터를 어디에 저장? -> HDFS
 >
@@ -20,13 +20,13 @@
 
 <br>
 
-- Hadoop은 많은 수의 작은 파일보다. 적은 수의 큰 파일을 다루는데 더 적합
+- **Hadoop은 많은 수의 작은 파일보다. 적은 수의 큰 파일을 다루는데 더 적합**
 
   <img src="https://user-images.githubusercontent.com/71415474/113379765-59ce7b80-93b5-11eb-811a-48685c8de7f2.PNG" alt="hadoop_15" style="zoom:50%;" />
 
   <br>
 
-- 장점
+- **장점**
 
   - 분산 프로세싱 지원 - 전체 파일이 아닌 블록
   - 고장 제어 - 블록 복제
@@ -35,7 +35,7 @@
 
   <br>
 
-- 한번 쓰고, 여러번 읽음
+- **한번 쓰고, 여러번 읽음**
 
   <img src="https://user-images.githubusercontent.com/71415474/113379341-2fc88980-93b4-11eb-88ec-84244e1ce7ae.PNG" alt="hadoop_8" style="zoom: 67%;" />
 
@@ -43,7 +43,7 @@
 
   <br>
 
-- HDFS Block Size
+- **HDFS Block Size**
 
   <img src="https://user-images.githubusercontent.com/71415474/113379431-669e9f80-93b4-11eb-8c6a-dc56904fc530.PNG" alt="hadoop_11" style="zoom:67%;" />
 
@@ -58,7 +58,7 @@
 
   <br>
 
-- 복제 계수(=Replication Factor)
+- **복제 계수(=Replication Factor)**
 
   - 설정 파일 : hdfs-site.xml
     ex. dfs.replication = 3
@@ -68,7 +68,7 @@
 
   <br>
 
-- 복제 위치 선택
+- **복제 위치 선택**
 
   - Rack Awareness
     :  서로 다른 Rack에 뭔가를 쓰기 위해서는 네트워크의 대역폭을 이용할 수 밖에 없다. Rack Awareness란 어떻게 Rack에 블록들을 복제하여 배치할 것
@@ -79,7 +79,7 @@
 
   <br>
 
-- 백업 위치 설정
+- **백업 위치 설정**
 
   - 설정 파일: hdfs-site.xml
     - dfs.namenode.name.dir
@@ -88,7 +88,7 @@
 
   <br>
 
-- 보조 네임노드(Secondary Namenode)
+- **보조 네임노드(Secondary Namenode)**
 
   - fsimage와 edits 편집로그를 병합하는 것은 컴퓨팅이 심한 작업임
 
@@ -109,7 +109,7 @@
 
   <br>
 
-- 정리 
+- **정리 **
 
   - HDFS는 이렇게 설계되었다.
     - 큰 파일을 다루기 위해 (수 백 MB, TB 그 이상)
@@ -118,8 +118,24 @@
 
   <br>
 
-  - HDFS는 이렇게 설계되지 않았따.
+  - HDFS는 이렇게 설계되지 않았다.
     - 짧은 지연시간을 가진 데이터 액세스
     - 작은파일 (많은 작은 파일들은 네임 노드의 메모리를 증가시킴)
     - 임의적인 파일 수정 (추가만 지원)
+  
+  <br>
+
+
+
+---
+
+### Reference
+
+- https://m.blog.naver.com/PostView.nhn?blogId=hse05105&logNo=221736375068&proxyReferer=https:%2F%2Fwww.google.com%2F
+
+- https://wikidocs.net/31521
+
+- HDFS 강의: https://www.youtube.com/watch?v=Ep9QiRjpifc&t=2391s
+
+  
 
