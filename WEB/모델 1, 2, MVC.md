@@ -27,7 +27,7 @@
 
 ![222](https://user-images.githubusercontent.com/24764210/114019829-d8418680-98a9-11eb-935f-4c9667817e9d.PNG)
 
-** 자바빈 설명 : 
+** 자바빈 설명 : https://github.com/jisicTank/Skill/blob/master/WEB/%EC%9E%90%EB%B0%94%EB%B9%88(Java%20Bean).md
 
 
 
