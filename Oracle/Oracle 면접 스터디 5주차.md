@@ -241,11 +241,13 @@
      -- 실행방법 1: 생성한 프로시저 실행하기
      SET SERVEROUTPUT ON;
      EXECUTE pro_noparam;
+     
        -- 실행방법 2: 익명 블록에서 프로시저 실행
      BEGIN
       pro_noparam;
      END;
      /
+     
      -- USER_SOURCE를 통해 프로시저 확인
      SELECT * FROM USER_SOURCE WHERE NAME = 'PRO_NOPARAM';
      
@@ -388,9 +390,7 @@
    AFTER
    INSERT OR UPDATE OR DELETE ON EMP_TRG
    FOR EACH ROW
-   
    BEGIN
-   
       IF INSERTING THEN
          INSERT INTO emp_trg_log
          VALUES ('EMP_TRG', 'INSERT', :new.empno,
@@ -451,11 +451,12 @@
 
 1. **롤(Role)**
 
-- 객체에 대해 권한을 생성
+- 객체에 대해 권한을 그룹으로 생성
 
 - 그룹 및 사용자에 대해 권한을 생성하여 보안과 관리에 용이하게 함
 
-- 롤 관리자는 DBA이다.
+  
+
 
 ### 넷째마당_19: 저장 서브프로그램
 
@@ -465,8 +466,6 @@
 - 트리거 내부에 commit, rollback 불가능
 
 - 작업대상 : 테이블, 뷰, 데이터베이스 작업
-
-- 트리거란 방아쇠로써, 방아쇠를 당기면 총알이 나가는 것과 같은 의미
 
 - 테이블에 트리거를 생성하여 어떠한 이벤트가 발생할 시 그에 대한 작업을 실행
 
@@ -479,11 +478,7 @@
 - execute 명령어로 실행
 - 프로시저 내부에 commit, rollback 가능
 
-- 비절차적 언어인 SQL을 보완하기 위해 제공하는 절차적 언어
-
 - 연속적인 실행 혹은 조건에 따른 분기처리를 통해 특정 기능을 수행할 수 있도록 작성 가능
-
-- 변수 및 상수 선언 가능, IF문 및 LOOP문 등 사용 가능
 
 - 보안(데이터 엑세스에 대해 제한), 생산성 향상, 무결성 일관성 향상
 

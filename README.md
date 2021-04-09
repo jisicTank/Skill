@@ -22,19 +22,10 @@
 
 - [캐시가 무엇인가요? redis 같은 걸 캐싱 서버로 사용해보신적 있으신가요?](https://github.com/jisicTank/Skill/blob/master/WEB/%EC%BA%90%EC%8B%9C.md)
 
-- CORS 이슈
+- [CORS 이슈](https://github.com/jisicTank/Skill/blob/master/WEB/CORS%20%EC%A0%95%EC%B1%85.md)
 
-- AJAX
+- [모델 1,2,MVC 패턴](https://github.com/jisicTank/Skill/blob/master/WEB/%EB%AA%A8%EB%8D%B8%201%2C%202%2C%20MVC.md)
 
-- Servlet 라이프 사이클 설명
-  
-  - 주소창에 URL을 치고 엔터를 치면 흐름이 어떻게 되는가
-  
-- 모델 1,2,MVC 패턴에 대한 설명
-
-- 프론트와 API 서버간에 어떻게 통신을 하는지, 구현을 어떻게 했는지 설명해주세요
-
-  (브라우저에서 API를 요청하고 데이터를 전달받는 과정을 설명해주세요)
 
 
 
