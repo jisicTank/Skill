@@ -1,6 +1,12 @@
 # Skill
 
+### 스킬 지식 저장소 📖
 
+본 레파지토리는 기술 스택의 올바른 이해를 위한 스터디 목적으로 내용을 추가하고 정리한 공간입니다.
+
+**Since** : 2021.02.02
+
+ 
 
 ## 📌 Web
 
@@ -48,5 +54,11 @@
 * [추상화, 상속, 추상클래스&인터페이스, 다형성](https://github.com/jisicTank/Skill/blob/master/Java/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%EA%B3%BC%EC%B6%94%EC%83%81%ED%99%94_%EC%83%81%EC%86%8D_%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4_%EB%8B%A4%ED%98%95%EC%84%B1.md)
 
 * [JVM 메모리 구조와 Wrapper Class](https://github.com/jisicTank/Skill/blob/master/Java/JVM%EB%A9%94%EB%AA%A8%EB%A6%AC%EA%B5%AC%EC%A1%B0_WrapperClass.md)
+
+* [Java에서의 Thread](https://github.com/jisicTank/Skill/blob/master/Java/Java%EC%97%90%EC%84%9C%EC%9D%98Thread.md)
+
+* [Call by Value & Call by Reference](https://github.com/jisicTank/Skill/blob/master/Java/Call%20by%20value%EC%99%80%20Call%20by%20reference.md)
+
+* [String & StringBuffer & StringBuilder](https://github.com/jisicTank/Skill/blob/master/Java/String_StringBuffer_StringBuilder.md)
 
   
