@@ -261,7 +261,7 @@ List<String> listArgument = new ArrayList<>();
 
 
 
-![java-memory-management_heap-3]($md-images/java-memory-management_heap-3.png)
+<img width="698" alt="java-memory-management_heap-3" src="https://user-images.githubusercontent.com/46706670/115541622-4d658080-a2da-11eb-9501-c2dfaec5cab1.png">
 
 
 
